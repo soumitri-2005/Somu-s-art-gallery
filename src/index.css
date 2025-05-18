@@ -1,7 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
+@import url('https://fonts.googleapis.com/css2?family=Buenard:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik+Dirt&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -10,3 +7,13 @@
 body {
   box-sizing: border-box;
 }
+
+:root {
+  --font-one: "Buenard", serif;
+  --font-two: "Montserrat", sans-serif;;
+  --font-three: "Rubik Dirt", system-ui;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
