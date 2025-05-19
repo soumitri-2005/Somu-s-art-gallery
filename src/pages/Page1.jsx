@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import bowOneImg from "../images/bow1.png";
@@ -12,6 +12,26 @@ import straberryImg from "../images/strawberry.png";
 import lineImg from "../images/line.png";
 
 const Page1 = () => {
+  const tiltRef = useRef(null);
+  const [xVal, setXVal] = React.useState(0);
+  const [yVal, setYVal] = React.useState(0);
+
+  const mouseMoving = (e) => {
+    setXVal(
+      (e.clientX -
+        tiltRef.current.getBoundingClientRect().x -
+        tiltRef.current.getBoundingClientRect().width / 2) /
+        30
+    );
+    setYVal(
+      -(
+        e.clientY -
+        tiltRef.current.getBoundingClientRect().y -
+        tiltRef.current.getBoundingClientRect().height / 2
+      ) / 30
+    );
+  };
+
   useGSAP(function () {
     gsap.from(".heading-text", {
       scale: 0.2,
@@ -22,8 +42,24 @@ const Page1 = () => {
     });
   });
 
+  useGSAP(
+    function () {
+      gsap.to(tiltRef.current, {
+        transform: `rotateX(${yVal}deg) rotateY(${xVal}deg)`,
+        duration: 2,
+        ease: "power2.out",
+      });
+    },
+    [xVal, yVal]
+  );
+
   return (
-    <div className="page1 bg-white h-screen w-full flex justify-center items-center justify-content-evenly flex-col gap-[1rem]">
+    <div
+      className="page1 bg-white h-screen w-full flex justify-center items-center justify-content-evenly flex-col gap-[1rem]"
+      onMouseMove={(e) => {
+        mouseMoving(e);
+      }}
+    >
       <div className="heading h-[30%] w-[35%] relative mt-10">
         <h1 className="heading-text font-two absolute text-[5rem] top-[10%] left-0 -rotate-[5deg]">
           Welcome
@@ -58,10 +94,13 @@ const Page1 = () => {
             className="h-[110px] w-auto absolute bottom-[100px] -right-12 -rotate-[100deg]"
           />
         </div>
-        <div className="cat h-[90%] w-[30%] flex justify-center relative items-center">
-          <img src={catImg} className="h-full w-auto" />
-          <div class="w-[15rem] h-24 rounded-full bg-black blur-lg absolute -bottom-11 right-[4rem]"></div>
+
+        {/* tilt img */}
+        <div className="cat h-[90%] w-[30%] flex justify-center relative items-center ">
+          <img src={catImg} className="h-full w-auto rounded-bl-[30%] rounded-br-[50%" ref={tiltRef} />
+          <div className="w-[15rem] h-28 rounded-full bg-black blur-lg absolute -bottom-14 right-[3.5rem]"></div>
         </div>
+
         <div className="two h-[100%] w-[30%] relative">
           <img
             src={starOneImg}
