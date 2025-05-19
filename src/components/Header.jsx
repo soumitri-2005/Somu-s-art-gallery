@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import palletImg from "../images/color-palette.png";
 import arrowImg from "../images/arrow.png";
 import { useGSAP } from "@gsap/react";
@@ -7,7 +7,7 @@ import gsap from "gsap";
 const Header = () => {
   useGSAP(function () {
     gsap.to(".arrow-line", {
-      rotation: 15,        
+      rotation: 15,
       duration: 0.4,
       yoyo: true,
       repeat: -1,
@@ -19,18 +19,42 @@ const Header = () => {
     });
   });
 
+  const btnRef = useRef(null);
+
+  const handleMouseEnter = () => {
+    gsap.to(btnRef.current, {
+      scale: 1.2,
+      duration: 0.3,
+      ease: "power1.inOut",
+    });
+  };
+
+  const handleMouseLeave = () => {
+    gsap.to(btnRef.current, {
+      scale: 1,
+      duration: 0.1,
+      ease: "power1.inOut",
+    });
+  };
+
   return (
     <div className="header absolute h-[200px] w-[150px]">
-      <div className="button-img h-[4.4rem] w-[4.4rem] mt-4 ml-4">
-        <img src={palletImg} className="h-full w-full"/>
+      <div className="button-img h-[3.8rem] w-[3.8rem] mt-4 ml-4"         ref={btnRef}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}>
+        <img src={palletImg} className="h-full w-full" />
       </div>
       <div className="arrow-line">
         <img
           src={arrowImg}
-          className=" -rotate-[150deg] h-[3rem] w-[3rem] mt-0 ml-12"
+          className=" -rotate-[150deg] h-[2rem] w-[2rem] mt-0 ml-12"
         />
       </div>
-      <p className="text-[1.1rem] font-one ml-8">Click Me!</p>
+      <p
+        className="text-[1rem] font-one ml-8 nav-btn"
+      >
+        Click Me!
+      </p>
     </div>
   );
 };

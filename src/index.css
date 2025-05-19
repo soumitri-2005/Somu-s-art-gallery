@@ -6,7 +6,13 @@
 
 body {
   box-sizing: border-box;
+  cursor: url("./images/cursor.png") 16 16, auto;
 }
+
+body {
+  cursor: none;
+}
+
 
 :root {
   --font-one: "Buenard", serif;
