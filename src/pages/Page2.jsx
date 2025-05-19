@@ -6,10 +6,10 @@ import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
 import gsap from "gsap";
 
 const Page2 = () => {
-  const parentRef = useRef(null);
+  const scrollPage = useRef(null);
   useEffect(() => {
     const handleWheel = (dets) => {
-      const children = parentRef.current?.children;
+      const children = scrollPage.current?.children;
       if (!children) return;
 
       Array.from(children).forEach((child) => {
@@ -41,7 +41,7 @@ const Page2 = () => {
   return (
     <div
       className="page2 h-[600px] w-full flex items-center justify-center flex-col gap-[0.7rem] mt-[2.5rem]"
-      ref={parentRef}
+      ref={scrollPage}
     >
       <div className="first scroll-item-left">
         <div className="h-full w-[5%] bg-[#141212]">
