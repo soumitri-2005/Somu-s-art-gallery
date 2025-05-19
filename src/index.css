@@ -1,4 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Buenard:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik+Dirt&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Buenard:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik+Dirt&display=swap");
+
+:root {
+  --font-one: "Buenard", serif;
+  --font-two: "Montserrat", sans-serif;
+  --font-three: "Rubik Dirt", system-ui;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
   margin: 0;
   padding: 0;
@@ -13,13 +24,20 @@ body {
   cursor: none;
 }
 
-
-:root {
-  --font-one: "Buenard", serif;
-  --font-two: "Montserrat", sans-serif;;
-  --font-three: "Rubik Dirt", system-ui;
+.options div {
+  height: 130px;
+  width: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 1rem;
+  font-family: var(--font-two);
+  color: wheat;
+  box-shadow: 4px 4px rgba(0, 0, 0, 0.684);
+  transition: all 0.2s ease-in-out;
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+.options div:hover {
+  scale: 1.1;
+}
