@@ -7,37 +7,36 @@ import gsap from "gsap";
 
 const Page2 = () => {
   const parentRef = useRef(null);
-useEffect(() => {
-  const handleWheel = (dets) => {
-    const children = parentRef.current?.children;
-    if (!children) return;
+  useEffect(() => {
+    const handleWheel = (dets) => {
+      const children = parentRef.current?.children;
+      if (!children) return;
 
-    Array.from(children).forEach((child) => {
-      if (child.classList.contains("scroll-item-left")) {
-        gsap.to(child, {
-          x: dets.deltaY > 0 ? "-20%" : "0%",
-          duration: 3,
-          repeat: -1,
-          ease: "none",
-        });
-      } else if (child.classList.contains("scroll-item-right")) {
-        gsap.to(child, {
-          x: dets.deltaY > 0 ? "20%" : "0%",
-          duration: 3,
-          repeat: -1,
-          ease: "none",
-        });
-      }
-    });
-  };
+      Array.from(children).forEach((child) => {
+        if (child.classList.contains("scroll-item-left")) {
+          gsap.to(child, {
+            x: dets.deltaY > 0 ? "-20%" : "0%",
+            duration: 3,
+            repeat: -1,
+            ease: "none",
+          });
+        } else if (child.classList.contains("scroll-item-right")) {
+          gsap.to(child, {
+            x: dets.deltaY > 0 ? "20%" : "0%",
+            duration: 3,
+            repeat: -1,
+            ease: "none",
+          });
+        }
+      });
+    };
 
-  window.addEventListener("wheel", handleWheel);
+    window.addEventListener("wheel", handleWheel);
 
-  return () => {
-    window.removeEventListener("wheel", handleWheel);
-  };
-}, []);
-
+    return () => {
+      window.removeEventListener("wheel", handleWheel);
+    };
+  }, []);
 
   return (
     <div
