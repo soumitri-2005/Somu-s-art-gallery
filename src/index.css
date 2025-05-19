@@ -45,3 +45,26 @@ body {
 .cat {
   perspective: 400px;
 }
+
+.page2 {
+  overflow: hidden;
+}
+
+.page2 .first, .second, .third, .fourth {
+  height: 13%;
+  width: 200%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  overflow: hidden;
+  transform: translateX(20%);
+}
+
+.page2 .first div, .second div, .third div, .fourth div{
+  flex-shrink: 0;
+  border-radius: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
