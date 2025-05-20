@@ -5,9 +5,9 @@ import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
 import SendIcon from "@mui/icons-material/Send";
 import TurnedInNotIcon from "@mui/icons-material/TurnedInNot";
 import picImg from "../images/pic.jpg";
-import FilterVintageIcon from '@mui/icons-material/FilterVintage';
-import SpaIcon from '@mui/icons-material/Spa';
-import EmojiNatureIcon from '@mui/icons-material/EmojiNature';
+import FilterVintageIcon from "@mui/icons-material/FilterVintage";
+import SpaIcon from "@mui/icons-material/Spa";
+import EmojiNatureIcon from "@mui/icons-material/EmojiNature";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
@@ -18,45 +18,53 @@ const Page3 = () => {
   const containerRef = useRef(null);
 
   useGSAP(() => {
-  gsap.from(".about", {
-    scrollTrigger: {
-      trigger: containerRef.current,
-      start: "top 80%",
-      toggleActions: "play none none none",
-    },
-    y: 100,
-    opacity: 0,
-    duration: 3, // Slower
-    ease: "power4.out",
-  });
+    gsap.from(".about", {
+      scrollTrigger: {
+        trigger: containerRef.current,
+        start: "top 80%",
+        toggleActions: "play none none none",
+      },
+      y: 100,
+      opacity: 0,
+      duration: 3, 
+      ease: "power4.out",
+    });
 
-  gsap.from(".msg", {
-    scrollTrigger: {
-      trigger: containerRef.current,
-      start: "top 80%",
-      toggleActions: "play none none none",
-    },
-    x: -100,
-    opacity: 0,
-    duration: 2, // Slower
-    delay: 0.4,
-    ease: "power4.out",
-  });
+    gsap.from(".msg", {
+      scrollTrigger: {
+        trigger: containerRef.current,
+        start: "top 80%",
+        toggleActions: "play none none none",
+      },
+      x: -100,
+      opacity: 0,
+      duration: 2, 
+      delay: 0.4,
+      ease: "power4.out",
+    });
 
-  gsap.from(".pic", {
-    scrollTrigger: {
-      trigger: containerRef.current,
-      start: "top 80%",
-      toggleActions: "play none none none",
-    },
-    x: 100,
-    opacity: 0,
-    duration: 2, // Slower
-    delay: 0.6,
-    ease: "power4.out",
-  });
-}, []);
-
+    gsap.from(".pic", {
+      scrollTrigger: {
+        trigger: containerRef.current,
+        start: "top 80%",
+        toggleActions: "play none none none",
+        onEnter: () => {
+          gsap.to(".pic", {
+            y: 10,
+            duration: 1,
+            repeat: -1,
+            yoyo: true,
+            ease: "power1.inOut",
+          });
+        },
+      },
+      x: 100,
+      opacity: 0,
+      duration: 1,
+      delay: 0.2,
+      ease: "power4.out",
+    });
+  }, []);
 
   return (
     <div
@@ -64,7 +72,7 @@ const Page3 = () => {
       className="page3 h-screen w-full bg-gradient-to-b from-white via-purple-400 to-white flex justify-center items-center relative"
     >
       <SpaIcon
-        style={{  
+        style={{
           fontSize: "4rem",
           color: "#8ac926",
           position: "absolute",
@@ -91,16 +99,16 @@ const Page3 = () => {
           <p className="h-[80%] w-full text-justify pr-14 mt-5 font-one text-[#fff]">
             Hiii! I'm{" "}
             <span className="bg-cyan-600 font-bold ">Soumitri Mishra,</span> a
-            B.Tech CSE student with a passion for sketching and creativity. I made
-            this website to showcase my art, from pencil portraits to colorful
-            illustrations, each piece reflects a part of me. Combining my love
-            for technology and art, this site is not just a portfolio, but a
-            glimpse into <span className="bg-red-400">my creative world</span>.
-            Thanks for visiting, and I hope you enjoy the journey through my
-            sketchbook! 🌻
+            B.Tech CSE student with a passion for sketching and creativity. I
+            made this website to showcase my art, from pencil portraits to
+            colorful illustrations, each piece reflects a part of me. Combining
+            my love for technology and art, this site is not just a portfolio,
+            but a glimpse into{" "}
+            <span className="bg-red-400">my creative world</span>. Thanks for
+            visiting, and I hope you enjoy the journey through my sketchbook! 🌻
           </p>
         </div>
-        <div className="pic h-[90%] w-[45%] bg-white rounded-2xl shadow-lg">
+        <div className="pic h-[90%] w-[45%] bg-white rounded-2xl">
           <div className="user-name h-[10%] w-full flex justify-between items-center">
             <div className="flex items-center gap-2">
               <div className="h-[28px] w-[28px] bg-purple-700 rounded-full mt-[10px] ml-[10px]">
