@@ -91,7 +91,7 @@ const Page3 = () => {
           <p className="h-[80%] w-full text-justify pr-14 mt-5 font-one text-[#fff]">
             Hiii! I'm{" "}
             <span className="bg-cyan-600 font-bold ">Soumitri Mishra,</span> a
-            B.Tech student with a passion for sketching and creativity. I made
+            B.Tech CSE student with a passion for sketching and creativity. I made
             this website to showcase my art, from pencil portraits to colorful
             illustrations, each piece reflects a part of me. Combining my love
             for technology and art, this site is not just a portfolio, but a
