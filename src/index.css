@@ -50,7 +50,7 @@ body {
   overflow: hidden;
 }
 
-.page2 .first, .second, .third, .fourth {
+.page2 .first, .page2 .second, .page2 .third, .page2 .fourth {
   height: 13%;
   width: 200%;
   display: flex;
@@ -58,10 +58,17 @@ body {
   align-items: center;
   gap: 1rem;
   overflow: hidden;
-  transform: translateX(20%);
 }
 
-.page2 .first div, .second div, .third div, .fourth div{
+.page2 .first, .page2 .third {
+    transform: translateX(20%);
+}
+
+.page2 .second, .page2 .fourth {
+    transform: translateX(-20%);
+}
+
+.page2 .first div, .page2 .second div, .page2 .third div, .page2 .fourth div{
   flex-shrink: 0;
   border-radius: 35px;
   display: flex;

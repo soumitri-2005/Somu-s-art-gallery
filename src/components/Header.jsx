@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import palletImg from "../images/color-palette.png";
 import arrowImg from "../images/arrow.png";
 import { useGSAP } from "@gsap/react";
@@ -19,34 +19,13 @@ const Header = ({ toggleSidebar }) => {
     });
   });
 
-  const btnRef = useRef(null);
-
-  const handleMouseEnter = () => {
-    gsap.to(btnRef.current, {
-      scale: 1.2,
-      duration: 0.3,
-      ease: "power1.inOut",
-    });
-  };
-
-  const handleMouseLeave = () => {
-    gsap.to(btnRef.current, {
-      scale: 1,
-      duration: 0.1,
-      ease: "power1.inOut",
-    });
-  };
-
   return (
-    <div className="header absolute h-[200px] w-[150px]">
+    <div className="header fixed h-[200px] w-[150px] z-20">
       <div
-        className="button-img h-[3rem] w-[3rem] mt-4 ml-4"
-        ref={btnRef}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
+        className="button-img h-[3rem] w-[3rem] mt-4 ml-4 "
         onClick={toggleSidebar}
       >
-        <img src={palletImg} className="h-full w-full" />
+        <img src={palletImg} className="h-full w-full hover:scale-[1.1]  transition-all duration-600 ease-in-out" />
       </div>
       <div className="arrow-line">
         <img
