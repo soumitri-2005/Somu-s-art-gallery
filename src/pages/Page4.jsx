@@ -85,7 +85,7 @@ const Page4 = () => {
           <img src={img3} alt="art-3" />
         </div>
         <div
-          className="card absolute top-[7%] left-[110%]"
+          className="card absolute top-[7%] left-[105%]"
           ref={(el) => (cardRefs.current[3] = el)}
         >
           <img src={img4} alt="art-4" />
