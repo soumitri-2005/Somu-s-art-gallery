@@ -5,6 +5,7 @@ import Cursor from "./components/Cursor";
 import Sidebar from "./components/Sidebar";
 import Page2 from "./pages/Page2";
 import Page3 from "./pages/Page3";
+import Page4 from "./pages/Page4";
 
 const App = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,6 +26,7 @@ const App = () => {
       <Page1 />
       <Page2 />
       <Page3 />
+      <Page4 />
     </>
   );
 };

@@ -26,7 +26,7 @@ const Page3 = () => {
       },
       y: 100,
       opacity: 0,
-      duration: 3, 
+      duration: 5, 
       ease: "power4.out",
     });
 
@@ -92,11 +92,11 @@ const Page3 = () => {
         }}
       />
       <div className="about h-[70%] w-[55%] flex justify-center items-center justify-content-evenly bg-black border rounded-xl shadow-lg p-8">
-        <div className="msg h-full w-[55%] flex flex-col justify-center items-start mt-24 ml-4">
-          <h1 className="h-[20%] w-auto text-center font-three text-[3rem] text-[#ffca3a] pl-5 pr-5 mt-[1rem] mb-[1rem]">
+        <div className="msg h-full w-[55%] flex flex-col justify-center items-center border-r-2 border-[#ffca3a] border-dashed mr-8">
+          <h1 className="h-[20%] w-auto text-center font-three text-[3rem] text-[#ffca3a] mt-14">
             About me!
           </h1>
-          <p className="h-[80%] w-full text-justify pr-14 mt-5 font-one text-[#fff]">
+          <p className="h-[80%] w-full text-justify font-one text-[#fff] p-7 pl-2">
             Hiii! I'm{" "}
             <span className="bg-cyan-600 font-bold ">Soumitri Mishra,</span> a
             B.Tech CSE student with a passion for sketching and creativity. I
