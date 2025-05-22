@@ -102,3 +102,27 @@ body {
   overflow: hidden;
   border: 2px solid #000;
 }
+
+.page5 .galery-grid {
+  height: 100%;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  transition: all 2s ease-in-out;
+}
+
+.galery-grid .images {
+  height: 25%;
+  width: 100%;
+  border-radius: 20px;
+  border: 2px solid black;
+}
+
+.galery-grid .images img, .galery-grid .images video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  padding: 5px;
+}
