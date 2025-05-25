@@ -102,7 +102,7 @@ const Page1 = () => {
             className="h-full w-auto rounded-bl-[30%] rounded-br-[50%"
             ref={tiltRef}
           />
-          <div className="w-[15rem] h-28 rounded-full bg-black blur-lg absolute -bottom-14 right-[3.5rem]"></div>
+          <div className="w-[15rem] h-28 rounded-full bg-black blur-lg absolute -bottom-14 right-[3.9rem]"></div>
         </div>
 
         <div className="two h-[100%] w-[30%] relative">
