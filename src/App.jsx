@@ -30,6 +30,7 @@ const App = () => {
       <Page3 />
       <Page4 />
       <Page5 />
+      <div className="w-full h-[200px]"></div>
       <Page6 />
     </>
   );
