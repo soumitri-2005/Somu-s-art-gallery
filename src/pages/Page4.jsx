@@ -63,7 +63,10 @@ const Page4 = () => {
         className="wrapper absolute top-0 w-[400vw] h-[100vh] will-change-transform"
         ref={wrapperRef}
       >
-        <h1 className="w-full text-black text-[32vw] text-center font-one space tracking-tight translate-x-[14%]"  style={{ textShadow: '2px 2px 10px #ffca3a' }}>
+        <h1
+          className="w-full text-black text-[32vw] text-center font-one space tracking-tight translate-x-[14%]"
+          style={{ textShadow: "2px 2px 10px #ffca3a" }}
+        >
           A Glimpse Of Heaven's Palette.
         </h1>
         <div

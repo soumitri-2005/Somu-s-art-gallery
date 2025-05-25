@@ -26,7 +26,7 @@ const Page3 = () => {
       },
       y: 100,
       opacity: 0,
-      duration: 5, 
+      duration: 5,
       ease: "power4.out",
     });
 
@@ -38,7 +38,7 @@ const Page3 = () => {
       },
       x: -100,
       opacity: 0,
-      duration: 2, 
+      duration: 2,
       delay: 0.4,
       ease: "power4.out",
     });

@@ -34,7 +34,7 @@ const Page5 = () => {
         trigger: galleryRef.current,
       },
     });
-  })
+  });
 
   const handleEnter = (e) => {
     gsap.to(e.currentTarget, {
@@ -66,7 +66,10 @@ const Page5 = () => {
 
   return (
     <>
-      <div ref={galleryRef} className="page5 w-full h-[200vh] flex justify-center items-center flex-row gap-3 ">
+      <div
+        ref={galleryRef}
+        className="page5 w-full h-[200vh] flex justify-center items-center flex-row gap-3 "
+      >
         <div className="gallery-grid">
           <ImageBlock>
             <img src={art1} alt="" />

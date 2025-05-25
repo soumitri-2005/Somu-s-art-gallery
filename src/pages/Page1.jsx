@@ -97,7 +97,11 @@ const Page1 = () => {
 
         {/* tilt img */}
         <div className="cat h-[90%] w-[30%] flex justify-center relative items-center ">
-          <img src={catImg} className="h-full w-auto rounded-bl-[30%] rounded-br-[50%" ref={tiltRef} />
+          <img
+            src={catImg}
+            className="h-full w-auto rounded-bl-[30%] rounded-br-[50%"
+            ref={tiltRef}
+          />
           <div className="w-[15rem] h-28 rounded-full bg-black blur-lg absolute -bottom-14 right-[3.5rem]"></div>
         </div>
 
