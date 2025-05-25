@@ -23,7 +23,7 @@ const Page4 = () => {
       onUpdate: (self) => {
         gsap.to(wrapperRef.current, {
           x: `${-500 * self.progress}vw`,
-          duration: 0.5,
+          duration: 1,
           ease: "power3.out",
         });
       },
@@ -47,7 +47,7 @@ const Page4 = () => {
           gsap.to(card.ref, {
             x: `${card.endTranslateX * self.progress}px`,
             rotate: `${card.rotate * self.progress * 2}`,
-            duration: 0.5,
+            duration: 1,
             ease: "power3.out",
           });
         },
@@ -58,12 +58,12 @@ const Page4 = () => {
   }, []);
 
   return (
-    <div className="container w-full h-[200vh] relative overflow-hidden">
+    <div className="container w-full h-[220vh] relative overflow-hidden">
       <section
         className="wrapper absolute top-0 w-[400vw] h-[100vh] will-change-transform"
         ref={wrapperRef}
       >
-        <h1 className="w-full text-black text-[32vw] text-center font-one space tracking-tight translate-x-[14%]">
+        <h1 className="w-full text-black text-[32vw] text-center font-one space tracking-tight translate-x-[14%]"  style={{ textShadow: '2px 2px 10px #ffca3a' }}>
           A Glimpse Of Heaven's Palette.
         </h1>
         <div

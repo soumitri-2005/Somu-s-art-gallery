@@ -20,11 +20,26 @@ import art15 from "../gallery/art15.jpg";
 import art16 from "../gallery/art16.jpg";
 import art17 from "../gallery/art17.jpg";
 import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+import { useRef } from "react";
 
 const Page5 = () => {
+  const galleryRef = useRef(null);
+  useGSAP(() => {
+    gsap.from(galleryRef.current, {
+      opacity: 0,
+      duration: 2,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: galleryRef.current,
+      },
+    });
+  })
+
   const handleEnter = (e) => {
     gsap.to(e.currentTarget, {
       boxShadow: "0 0 10px #000",
+      backgroundColor: "#8ac926",
       duration: 0.3,
       ease: "power2.out",
     });
@@ -33,6 +48,7 @@ const Page5 = () => {
   const handleLeave = (e) => {
     gsap.to(e.currentTarget, {
       boxShadow: "0 0 0 transparent",
+      backgroundColor: "transparent",
       duration: 0.3,
       ease: "power2.out",
     });
@@ -50,8 +66,8 @@ const Page5 = () => {
 
   return (
     <>
-      <div className="page5 w-full h-[200vh] flex justify-center items-center flex-row gap-3 ">
-        <div className="galery-grid">
+      <div ref={galleryRef} className="page5 w-full h-[200vh] flex justify-center items-center flex-row gap-3 ">
+        <div className="gallery-grid">
           <ImageBlock>
             <img src={art1} alt="" />
           </ImageBlock>
@@ -68,7 +84,7 @@ const Page5 = () => {
           </ImageBlock>
         </div>
 
-        <div className="galery-grid mt-40">
+        <div className="gallery-grid translate-y-[90px]">
           <ImageBlock>
             <img src={art4} alt="" />
           </ImageBlock>
@@ -83,7 +99,7 @@ const Page5 = () => {
           </ImageBlock>
         </div>
 
-        <div className="galery-grid">
+        <div className="gallery-grid -translate-y-[50px]">
           <ImageBlock>
             <img src={art8} alt="" />
           </ImageBlock>
@@ -100,7 +116,7 @@ const Page5 = () => {
           </ImageBlock>
         </div>
 
-        <div className="galery-grid mt-28">
+        <div className="gallery-grid translate-y-[50px]">
           <ImageBlock>
             <img src={art11} alt="" />
           </ImageBlock>
@@ -115,7 +131,7 @@ const Page5 = () => {
           </ImageBlock>
         </div>
 
-        <div className="galery-grid">
+        <div className="gallery-grid">
           <ImageBlock>
             <img src={art15} alt="" />
           </ImageBlock>

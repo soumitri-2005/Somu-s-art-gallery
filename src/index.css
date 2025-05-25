@@ -103,7 +103,7 @@ body {
   border: 2px solid #000;
 }
 
-.page5 .galery-grid {
+.page5 .gallery-grid {
   height: 100%;
   width: 20%;
   display: flex;
@@ -112,14 +112,14 @@ body {
   transition: all 2s ease-in-out;
 }
 
-.galery-grid .images {
+.gallery-grid .images {
   height: 25%;
   width: 100%;
   border-radius: 20px;
   border: 2px solid black;
 }
 
-.galery-grid .images img, .galery-grid .images video {
+.gallery-grid .images img, .gallery-grid .images video {
   width: 100%;
   height: 100%;
   object-fit: cover;

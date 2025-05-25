@@ -37,8 +37,8 @@ const Page1 = () => {
       scale: 0.2,
       opacity: 0,
       duration: 1,
-      ease: "back.out(1.7)",
-      stagger: 0.2,
+      ease: "back.out(1.5)",
+      stagger: 0.3,
     });
   });
 
