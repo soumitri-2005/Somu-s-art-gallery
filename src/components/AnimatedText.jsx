@@ -58,7 +58,7 @@ const AnimatedText = () => {
   return (
     <h2
       ref={headingRef}
-      className="text-[10rem] ml-7 flex select-none overflow-hidden font-two tracking-tighter"
+      className="text-[10rem] ml-7 font-[500] flex select-none overflow-hidden font-two tracking-tighter"
     >
       {text.split("").map((char, i) => (
         <span key={i} className="inline-block">

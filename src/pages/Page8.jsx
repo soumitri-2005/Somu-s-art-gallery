@@ -33,7 +33,7 @@ const Page8 = () => {
       <div className="overflow-hidden">
         <AnimatedText />
       </div>
-      <div className="relative max-w-[500px] w-full">
+      <div className="relative max-w-[500px] w-full mb-[3rem]">
         <div className="absolute inset-0 bg-gradient-to-tr from-pink-400 to-purple-500 rounded-3xl blur-2xl opacity-70"></div>
         <form
           onSubmit={onSubmit}
@@ -85,7 +85,7 @@ const Page8 = () => {
               </div>
               <button
                 type="submit"
-                className="bg-[#ff595e] font-two text-black font-semibold h-[43px] rounded-md mt-[0.55rem] transition-transform active:scale-95 cursor-none"
+                className="bg-[#ff595e] font-two text-[#ffca3a] font-semibold h-[43px] rounded-md mt-[0.55rem] active:scale-95 hover:bg-[#6a4c93] hover:text-[#8ac926] cursor-none transition-all duration-300 ease-in-out"
               >
                 Send Message
               </button>
