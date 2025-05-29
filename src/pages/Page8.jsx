@@ -33,7 +33,7 @@ const Page8 = () => {
       <div className="overflow-hidden">
         <AnimatedText />
       </div>
-      <div className="relative max-w-[500px] w-full mb-[3rem]">
+      <div className="relative max-w-[500px] w-full mb-[2.5rem]">
         <div className="absolute inset-0 bg-gradient-to-tr from-pink-400 to-purple-500 rounded-3xl blur-2xl opacity-70"></div>
         <form
           onSubmit={onSubmit}
@@ -43,7 +43,7 @@ const Page8 = () => {
             <div className="w-1/2 flex flex-col pr-6">
               <div className="mt-2">
                 <label htmlFor="name" className="block cursor-none font-two">
-                  Full Name
+                  Full Name:
                 </label>
                 <input
                   id="name"
@@ -57,7 +57,7 @@ const Page8 = () => {
 
               <div className="mt-4">
                 <label htmlFor="email" className="block cursor-none font-two">
-                  Email
+                  Email:
                 </label>
                 <input
                   id="email"
@@ -73,7 +73,7 @@ const Page8 = () => {
             <div className="w-1/2 flex flex-col pr-6">
               <div className="mt-2">
                 <label htmlFor="message" className="block cursor-none font-two">
-                  Message
+                  Message:
                 </label>
                 <textarea
                   id="message"
