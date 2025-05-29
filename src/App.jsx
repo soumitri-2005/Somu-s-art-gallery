@@ -9,6 +9,7 @@ import Page4 from "./pages/Page4";
 import Page5 from "./pages/Page5";
 import Page6 from "./pages/Page6";
 import Page7 from "./pages/Page7";
+import Page8 from "./pages/Page8";
 
 const App = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,6 +35,8 @@ const App = () => {
       <div className="w-full h-[200px]"></div>
       <Page6 />
       <Page7 />
+      <Page8 />
+      {/* floating dock */}
     </>
   );
 };

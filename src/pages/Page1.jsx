@@ -36,8 +36,8 @@ const Page1 = () => {
     gsap.from(".heading-text", {
       scale: 0.2,
       opacity: 0,
-      duration: 1,
-      ease: "back.out(1.5)",
+      duration: 1.2,
+      ease: "back.out(1.2)",
       stagger: 0.3,
     });
   });

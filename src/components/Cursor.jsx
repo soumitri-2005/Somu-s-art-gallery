@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import cursorImg from "../images/cursor.png"; // your image path
 
-const CustomCursor = () => {
+const Cursor = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
@@ -31,4 +31,4 @@ const CustomCursor = () => {
   );
 };
 
-export default CustomCursor;
+export default Cursor;
