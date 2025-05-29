@@ -1,6 +1,5 @@
 import React, { useRef, useState } from "react";
 import { gsap } from "gsap";
-import { useGSAP } from "@gsap/react";
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 import ArrowLeftIcon from "@mui/icons-material/ArrowLeft";
 import art18 from "../gallery/art18.jpg";
@@ -21,19 +20,6 @@ import star from "../images/star1.png";
 import bow from "../images/bow2.png";
 
 const Sketchbook = () => {
-  const skeRef = useRef();
-
-  useGSAP(() => {
-    gsap.from(skeRef.current, {
-      opacity: 0,
-      x: 100,
-      duration: 1,
-      delay: 0.5,
-      scrollTrigger: {
-        trigger: skeRef.current,
-      },
-    });
-  }, []);
 
   const [page, setPage] = useState(0);
   const total = 9;
@@ -87,7 +73,7 @@ const Sketchbook = () => {
         className="flex justify-center items-center overflow-hidden"
         style={{ height: "100vh", width: "100vw" }}
       >
-        <div className="relative page7 w-full h-full" ref={skeRef}>
+        <div className="relative page7 w-full h-full">
           <button
             onClick={flipBackward}
             className="absolute text-4xl z-20 left-[8rem] top-[21rem]"

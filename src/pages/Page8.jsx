@@ -85,7 +85,7 @@ const Page8 = () => {
               </div>
               <button
                 type="submit"
-                className="bg-[#ff595e] font-two text-[#ffca3a] font-semibold h-[43px] rounded-md mt-[0.55rem] active:scale-95 hover:bg-[#6a4c93] hover:text-[#8ac926] cursor-none transition-all duration-300 ease-in-out"
+                className="bg-[#ff595e] font-two text-[#ffca3a] font-semibold h-[43px] rounded-md mt-[0.55rem] active:scale-95 hover:bg-[#8ac926] hover:text-[#6a4c93] cursor-none transition-all duration-300 ease-in-out"
               >
                 Send Message
               </button>

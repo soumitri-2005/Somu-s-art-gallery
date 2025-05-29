@@ -188,3 +188,10 @@ body {
 .page7 button:active {
   transform: scale(0.9);
 }
+
+.page9 .icon {
+  font-size: 5.2rem;
+  padding: 15px;
+  border-radius: 50%;
+  background-color: wheat;
+}
