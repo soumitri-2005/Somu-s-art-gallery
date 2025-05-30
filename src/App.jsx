@@ -28,15 +28,15 @@ const App = () => {
         ></div>
       )}
 
-      <Page1 />
+      <div id="home"><Page1 /></div>
       <Page2 />
-      <Page3 />
+      <div id="about"><Page3 /></div>
       <Page4 />
       <Page5 />
       <div className="w-full h-[200px]"></div>
       <Page6 />
-      <Page7 />
-      <Page8 />
+      <div id="sketchbook"><Page7 /></div>
+      <div id="contact"><Page8 /></div>
       <Page9 />
     </>
   );

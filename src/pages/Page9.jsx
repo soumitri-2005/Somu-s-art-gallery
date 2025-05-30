@@ -12,7 +12,7 @@ const Page9 = () => {
           <div className="h-full w-[45%] flex justify-center items-center gap-6">
             <img src={pallete} className="h-[90%] w-auto" />
             <div className="h-full w-[60%] flex justify-center items-center">
-              <h1 className="font-two text-[4rem] text-start leading-[4rem] pl-4 pt-1 pb-1 border-l-[1rem] rounded-lg border-[#ff595e] bg-gradient-to-r from-[#f8ff6b] to-[#1bafb1] text-transparent bg-clip-text">
+              <h1 className="font-two text-[4rem] text-start leading-[4rem] pl-4 pt-1 pb-1 border-l-[1rem] rounded-lg border-[#ffca3a] bg-gradient-to-r from-[#f8ff6b] to-[#1bafb1] text-transparent bg-clip-text">
                 Somu's Art Gallery.
               </h1>
             </div>

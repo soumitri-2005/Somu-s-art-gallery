@@ -21,7 +21,7 @@ const Page8 = () => {
     }).then((res) => res.json());
 
     if (res.success) {
-      alert("Message sent successfully!");
+      alert("Message sent. Thank you!");
       event.target.reset();
     } else {
       alert("Something went wrong.");

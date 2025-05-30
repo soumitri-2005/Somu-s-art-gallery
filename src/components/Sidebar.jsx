@@ -9,22 +9,22 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
     >
       <nav className="flex flex-col p-4 gap-4 options">
         <div className="one bg-[red] ml-[60px]">
-          <a href="#" className=" cursor-none">
+          <a href="#home" className=" cursor-none">
             Home
           </a>
         </div>
         <div className="two bg-[green] ml-[150px]">
-          <a href="#" className=" cursor-none">
+          <a href="#about" className=" cursor-none">
             About
           </a>
         </div>
         <div className="three bg-[blue] ml-[150px] mt-[30px]">
-          <a href="#" className="cursor-none">
+          <a href="#sketchbook" className="cursor-none">
             Sketchbook
           </a>
         </div>
         <div className="four bg-[orange] ml-[60px]">
-          <a href="#" className=" cursor-none">
+          <a href="#contact" className=" cursor-none">
             Contact
           </a>
         </div>
